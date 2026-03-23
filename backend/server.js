@@ -7,7 +7,7 @@ import 'dotenv/config';
 
 import { clerkMiddleware } from '@clerk/express'
 import { connectDB } from './config/db.js';
-
+import userRoutes from './routes/user.js';
 const app = express();
 const PORT = process.env.PORT || 4000; // Added a backup port just in case
 
@@ -21,6 +21,8 @@ app.use(clerkMiddleware());
 connectDB();
 
 // ROUTES
+app.use("/api/users", userRouter);
+
 app.get("/", (req, res) => {
     res.send("API WORKING");
 });
