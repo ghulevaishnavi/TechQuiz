@@ -37,7 +37,7 @@ export const clerkWebhook = async (req, res) => {
                     clerkId: data.id,
                     email: primaryEmail,
                     // ERROR FIX: Used backticks (`) for template literals
-                    fullName: `${data.first_name || ""} ${data.last_name || ""}`.trim(),
+                    fullName: `${data.first_name || ""} ${data.last_name || ""}`,
                     role: role
                 },
                 { upsert: true, new: true }
