@@ -1,9 +1,10 @@
 import express from 'express';
-import { CreatemyResult, getMyResults } from '../controllers/resultController.js';
+// Add this exact line below (don't forget the .js at the end!)
+import { CreatemyResult } from '../controllers/resultController.js';
 
 const router = express.Router();
 
-router.post("/save-result", CreatesmyResult);
-router.get("/my-result", getMyResult);
+// This line will now work because CreatemyResult is imported
+router.post("/save-result", CreatemyResult);
 
 export default router;
