@@ -12,6 +12,7 @@ export const clerkWebhook = async (req, res) => {
         const wh = new Webhook(WEBHOOK_SECRET);
         const evt = wh.verify(payload, {
             "svix-id": headers["svix-id"],
+            "svix-timestamp": headers["svix-timestamp"],
             "svix-signature": headers["svix-signature"],
         });
         const { type, data } = evt;
