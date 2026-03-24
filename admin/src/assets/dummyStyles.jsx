@@ -1,4 +1,4 @@
-/ assets/dummyStyles.js
+// assets/dummyStyles.js
 
 // Background image designs for different quiz types
 export const backgroundDesigns = {
